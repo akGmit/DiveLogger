@@ -9,9 +9,11 @@ namespace DiveLogger.Views
 
     public class LogPageMenuItem
     {
+       
         public LogPageMenuItem()
         {
-            TargetType = typeof(LogPageDetail);
+            TargetType = typeof(DiveLogPage);
+            
         }
         public int Id { get; set; }
         public string Title { get; set; }

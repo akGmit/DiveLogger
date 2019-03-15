@@ -5,8 +5,8 @@
              x:Class="DiveLogger.Views.LogPageMaster"
              Title="Master">
 
-    <StackLayout>
-        <ListView x:Name="lstViewLogPage" x:FieldModifier="public">
+    <StackLayout WidthRequest="150">
+        <ListView x:Name="lstViewLogPage" x:FieldModifier="public" WidthRequest="150">
             <ListView.ItemsSource>
                 <x:Array Type="{x:Type local:LogPageMenuItem}">
                     <local:LogPageMenuItem Title="Dive Log" TargetType="{x:Type local:DiveLogPage}" />
@@ -14,10 +14,10 @@
                     <local:LogPageMenuItem Title="Statistics" TargetType="{x:Type local:DiveStatisticsPage}" />
                 </x:Array>
             </ListView.ItemsSource>
-            <ListView.ItemTemplate >
+            <ListView.ItemTemplate>
                 <DataTemplate >
                     <ViewCell>
-                        <Grid>
+                        <Grid WidthRequest="130">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30"/>
                                 <ColumnDefinition Width="*" />

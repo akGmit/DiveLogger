@@ -5,7 +5,7 @@
     <Application.Resources >
         <ResourceDictionary>
         <Style x:Key="NavPage" TargetType="NavigationPage">
-            <Setter Property="HeightRequest" Value="12"/>
+            <Setter Property="HeightRequest" Value="8"/>
             <Setter Property="BackgroundColor" Value="LightBlue"/>
         </Style>
         <Style x:Key="TabsStyle" TargetType="TabbedPage">

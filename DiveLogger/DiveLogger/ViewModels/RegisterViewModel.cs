@@ -90,6 +90,7 @@ namespace DiveLogger.ViewModels
             user.StoreLoginDetails();
             App.Current.MainPage = new Views.MainPage();
         }
+
         private async void RegFailedAsync()
         {
             await App.Current.MainPage.DisplayAlert("Failed", "Username already taken!", "Try again"); 

@@ -3,12 +3,134 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DiveLogger.Views.DiveLogPage"
              Title="Dive Log">
-    <ContentPage.Content  >
-        
-        <StackLayout>
-            <Label Text="Dive LOG PAGE"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <ContentPage.Resources>
+
+    </ContentPage.Resources>
+
+    <!--<ContentPage.Content>
+        <ScrollView>
+            <Frame>
+            <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="DarkGoldenrod">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                <Label Text="Dive Number" ></Label>
+                <Entry HorizontalOptions="EndAndExpand" WidthRequest="60"></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Visibility" ></Label>
+                <Entry ></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Max Depth" ></Label>
+                <Entry ></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Duration" ></Label>
+                <Entry ></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Temperature" ></Label>
+                <Entry ></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Location" ></Label>
+                <Entry ></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Dive Notes" ></Label>
+                <Frame>
+                    <Editor HeightRequest="130">
+                        
+                    </Editor>
+                </Frame>
+            </StackLayout>
         </StackLayout>
-    </ContentPage.Content>
+            </Frame>
+        </ScrollView>
+    </ContentPage.Content>-->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="menuSave" Order="Primary"  Text="Save Log" Priority="0" />
+       
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <TableView Intent="Form" HasUnevenRows="True">
+            <TableRoot>
+                <TableSection Title="Dive Details" >
+                    <ViewCell>
+                        <Grid HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Dive Number:" HorizontalOptions="StartAndExpand"></Label>
+                            <Entry Grid.Column="1" HorizontalOptions="FillAndExpand"/>
+                        </Grid>
+
+                    </ViewCell>
+                    <ViewCell>
+                        <Grid HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Visibility:" HorizontalOptions="StartAndExpand"></Label>
+                            <Entry Grid.Column="1" HorizontalOptions="FillAndExpand"/>
+                        </Grid>
+
+                    </ViewCell>
+                    <ViewCell>
+                        <Grid HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Max Depth:" HorizontalOptions="StartAndExpand"></Label>
+                            <Entry Grid.Column="1" HorizontalOptions="FillAndExpand"/>
+                        </Grid>
+
+                    </ViewCell>
+                    <ViewCell>
+                        <Grid HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Duration:" HorizontalOptions="StartAndExpand"></Label>
+                            <Entry Grid.Column="1" HorizontalOptions="FillAndExpand"/>
+                        </Grid>
+
+                    </ViewCell>
+                    <ViewCell>
+                        <Grid HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Temperature:" HorizontalOptions="StartAndExpand"></Label>
+                            <Entry Grid.Column="1" HorizontalOptions="FillAndExpand"/>
+                        </Grid>
+
+                    </ViewCell>
+                    <ViewCell>
+                        <Grid HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Location:" HorizontalOptions="StartAndExpand"></Label>
+                            <Entry Grid.Column="1" HorizontalOptions="FillAndExpand"/>
+                        </Grid>
+                        
+                    </ViewCell>
+                    </TableSection>
+                <TableSection Title="Dive Notes">
+                    <ViewCell >
+                        <Frame BorderColor="Blue" HasShadow="True" Padding="3">
+                                <Editor Grid.Row="1" HeightRequest="150" VerticalOptions="Fill" BackgroundColor="DimGray">
+                                </Editor>
+                        </Frame>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ScrollView>
 </ContentPage>

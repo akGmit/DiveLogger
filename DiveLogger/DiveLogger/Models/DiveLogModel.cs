@@ -6,12 +6,20 @@ using Xamarin.Essentials;
 
 namespace DiveLogger.ViewModels
 {
-    class DiveLogModel : INotifyPropertyChanged
+    class DiveLogModel : BaseViewModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
 
         #region Properties
-        
+
+        private int diveNumber;
+        private float visibility;
+        private float maxDepth;
+        private TimeSpan duration;
+        private float waterTemp;
+        private TimeSpan totalDiveTime;
+        private string diveNotes;
+        private Location location;
+
         public int DiveNumber { get; set; }
         public float Visibility { get; set; }
         public float MaxDepth { get; set; }
@@ -20,7 +28,12 @@ namespace DiveLogger.ViewModels
         public TimeSpan TotalDiveTime { get; set; }
         public string DiveNotes { get; set; }
         public Location Location { get; set; }
-        
+
         #endregion
+
+        public DiveLogModel()
+        {
+        }
+
     }
 }

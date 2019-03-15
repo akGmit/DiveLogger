@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-14T10:00:58.735</Modified>
+      <Modified>2019-03-15T08:13:45.998</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\DiveLogger.UWP.exe">
       <PackagePath>entrypoint\DiveLogger.UWP.exe</PackagePath>
-      <Modified>2019-03-14T10:00:57.030</Modified>
+      <Modified>2019-03-15T08:13:43.743</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\o\.nuget\packages\dnsclient\1.0.7\lib\netstandard1.3\DnsClient.dll">
       <PackagePath>DnsClient.dll</PackagePath>
@@ -736,7 +736,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\bin\Debug\netstandard2.0\DiveLogger.dll">
       <PackagePath>DiveLogger.dll</PackagePath>
-      <Modified>2019-03-14T10:00:47.979</Modified>
+      <Modified>2019-03-15T08:13:33.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -899,11 +899,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-03-14T10:00:56.731</Modified>
+      <Modified>2019-03-15T08:13:43.437</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-03-14T10:00:56.731</Modified>
+      <Modified>2019-03-15T08:13:43.438</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -919,7 +919,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\Core\DiveLogger.UWP.exe">
       <PackagePath>DiveLogger.UWP.exe</PackagePath>
-      <Modified>2019-03-14T10:00:58.726</Modified>
+      <Modified>2019-03-15T08:13:45.985</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

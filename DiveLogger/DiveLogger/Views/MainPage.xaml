@@ -5,11 +5,9 @@
              x:Class="DiveLogger.Views.MainPage"
             Style="{StaticResource TabsStyle}"
             >
-    <TabbedPage.Children >
         <pages:DiveSitesPage />
         <pages:DiversBoardPage/>
         <pages:LogPage/>
         <pages:FriendsPage/>
         <pages:ProfilePage/>
-    </TabbedPage.Children>
 </TabbedPage>

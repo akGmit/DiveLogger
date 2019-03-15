@@ -27,10 +27,8 @@ C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\DiveStatisticsPage.xaml.g.cs
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\FriendsPage.xaml.g.cs
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\LogPage.xaml.g.cs
-C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\LogPageDetail.xaml.g.cs
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\LogPageMaster.xaml.g.cs
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
-C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\PopUpDisplay.xaml.g.cs
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\ProfilePage.xaml.g.cs
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\StartPage.xaml.g.cs
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.csproj.CoreCompileInputs.cache

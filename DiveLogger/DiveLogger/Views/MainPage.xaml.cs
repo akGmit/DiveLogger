@@ -9,6 +9,7 @@ namespace DiveLogger.Views
         {
             InitializeComponent();
             CurrentPage = Children[2];
+
         }
 
         private async void BtnNavRegister_Clicked(object sender, EventArgs e) 

@@ -5,7 +5,9 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace DiveLogger.Utils
 {
@@ -40,6 +42,20 @@ namespace DiveLogger.Utils
             }
 
             return false;
+        }
+        
+
+        public static async System.Threading.Tasks.Task<ObservableCollection<PostViewModel>> GetPostsAsync()
+        {
+            var documents = await Get_Collection("posts").Find(new BsonDocument()).Project(Builders<BsonDocument>.Projection.Exclude("_id")).ToListAsync();
+            var obj = documents.ToJson();
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<ObservableCollection<PostViewModel>>(obj);
+        }
+      
+
+        public static void SendPost(PostViewModel post)
+        {
+            Get_Collection("posts").InsertOne(post.ToBsonDocument());
         }
 
         private static bool UserNameExists(string name) {
