@@ -3,6 +3,7 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 x:Class="DiveLogger.Views.Account.RegisterPage"
              xmlns:local="clr-namespace:DiveLogger.Utils"
+             xmlns:view="clr-namespace:DiveLogger.ViewModels"
              Title="Register">
 
     <ContentPage.Resources>
@@ -15,6 +16,9 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <Grid>
+        <!--<Grid.BindingContext>
+            <view:RegisterViewModel/>
+        </Grid.BindingContext>-->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -50,7 +54,7 @@
 
             <Entry  x:Name="entryRegUsername"
 				    Grid.Row="0" Grid.Column="1" 
-                    Text="{Binding UserName, Mode=TwoWay}"
+                    Text="{Binding UserName}"
                     Style="{StaticResource EntryStyle}">
             </Entry>
 
@@ -62,7 +66,7 @@
             <Entry  x:Name="entryRegPassword"
 				    Grid.Row="1" Grid.Column="1"   
 				    IsPassword="True"
-                    Text="{Binding Password, Mode=TwoWay}"
+                    Text="{Binding Password}"
                     Style="{StaticResource EntryStyle}">
             </Entry>
 
@@ -74,7 +78,7 @@
             <Entry  x:Name="entryRegConfirmPassword"
 				    Grid.Row="2" Grid.Column="1"  
 				    IsPassword="True"
-                    Text="{Binding PasswordConfirm, Mode=TwoWay}"
+                    Text="{Binding PasswordConfirm}"
                     Style="{StaticResource EntryStyle}"
                     TextChanged="MatchPassword">
             </Entry>
@@ -116,7 +120,7 @@
                                     Path=Text.Length, 
                                     Converter={StaticResource entryFieldValid}}"
                                     Value="true"/>
-                            <BindingCondition x:Name="passwordMatch" Binding="{Binding PasswordMatch}" Value="True" />
+                            <!--<BindingCondition x:Name="passwordMatch" Binding="{Binding PasswordMatch}" Value="True" />-->
                         </MultiTrigger.Conditions>
                         <Setter Property="IsEnabled" Value="True"/>
                     </MultiTrigger>

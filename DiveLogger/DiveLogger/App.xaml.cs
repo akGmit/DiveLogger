@@ -13,19 +13,20 @@ namespace DiveLogger
         public App()
         {
             InitializeComponent();
-            //MainPage = new Views.Account.RegisterPage();
-            DataBaseConnection.Connect();
         }
 
         protected override void OnStart()
         {
-            // Handle when your app starts
-            if(Preferences.Get("Valid", "false") == "true")
+            DataBaseConnection.Connect();
+
+            if (Preferences.Get("Valid", "false").Equals("false"))
             {
-                
+                MainPage = new MainPage();
             }
-            //MainPage = new NavigationPage(new StartPage());
-            MainPage = new MainPage();
+            else
+            {
+                MainPage = new NavigationPage(new StartPage());
+            }
         }
 
         protected override void OnSleep()

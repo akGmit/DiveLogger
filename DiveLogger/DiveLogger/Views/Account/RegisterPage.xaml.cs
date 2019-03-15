@@ -23,14 +23,14 @@ namespace DiveLogger.Views.Account
             (BindingContext as RegisterViewModel).RegisterUserAsync();
         }
 
-        private void EntryRegPassword_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
-        }
-
         private void MatchPassword(object sender, FocusEventArgs e)
         {
             (BindingContext as RegisterViewModel).MatchPass();
+        }
+
+        private void EntryRegConfirmPassword_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

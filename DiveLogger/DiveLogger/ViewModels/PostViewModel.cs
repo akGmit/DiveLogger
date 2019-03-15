@@ -38,7 +38,7 @@ namespace DiveLogger.ViewModels
 
         public static void SendPost(PostViewModel post)
         {
-
+            DBCollection.SendPost(post);
         }
     }
 }

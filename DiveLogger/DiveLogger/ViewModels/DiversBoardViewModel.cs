@@ -15,16 +15,13 @@ namespace DiveLogger.ViewModels
         public ICommand ShowCreatePostCommand { get; private set; }
         public ICommand SendPostCommand { get; private set; }
 
-        private ObservableCollection<PostViewModel> posts;
+        private ObservableCollection<PostViewModel> posts = new ObservableCollection<PostViewModel>();
         public ObservableCollection<PostViewModel> Posts
         {
             get { return posts; }
             private set { SetValue(ref posts, value); }
         }
-
-        public string Title { get; set; }
-        public string Post { get; set; }
-
+        
         private PostViewModel newPost;
         public PostViewModel NewPost
         {
@@ -42,7 +39,8 @@ namespace DiveLogger.ViewModels
         public DiversBoardViewModel()
         {
             ShowCreatePostCommand = new Command(IsHiddenPostForm);
-            SendPostCommand = new Command(SendPost);
+            SendPostCommand = new Command<PostViewModel>(SendPost);
+            newPost = new PostViewModel();
             GetPostsAsync();
         }
 
@@ -51,12 +49,12 @@ namespace DiveLogger.ViewModels
             Posts = await PostViewModel.GetPostsAsync();
         }
 
-        public void SendPost()
+        public void SendPost(PostViewModel post)
         {
-            NewPost = new PostViewModel(Title, Post);
-            PostViewModel.SendPost(NewPost);
-            Posts.Add(NewPost);
-            NewPost = null;
+            PostViewModel.SendPost(post);
+            Posts.Add(post);
+            NewPost = new PostViewModel();
+            IsHiddenPostForm();
         }
 
         private void IsHiddenPostForm() => ShowPostForm = !ShowPostForm;

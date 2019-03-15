@@ -1,36 +1,32 @@
-﻿using DiveLogger.Utils;
+﻿using DiveLogger.Models;
+using DiveLogger.Utils;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DiveLogger.ViewModels
 {
-    class LoginViewModel
+    class LoginViewModel : BaseViewModel
     {
         private UserModel user;
         private string password;
         private string username;
 
         public string Password
-        { set
-            {
-                if (password == value) return;
-                password = value;
-            }
+        {
+            get { return password; }
+            set { SetValue(ref password, value); }
         }
-
         public string UserName
         {
-            set
-            {
-                if (username == value) return;
-                username = value;
-            }
+            get { return username; }
+            set { SetValue(ref username, value); }
         }
 
         public void LogIn()
         {
-            user = new UserModel(username, password);
+            UserModel.user.UserName = UserName;
+            UserModel.user.Password = Password;
             bool isValid = DBCollection.LogIn(user);
 
             if (isValid) LogInSuccesful();
@@ -46,7 +42,7 @@ namespace DiveLogger.ViewModels
 
         private void LogInSuccesful()
         {
-            user.StoreLoginDetails();
+            user.StoreUserDetails();
             App.Current.MainPage = new Views.MainPage();
         }
     }

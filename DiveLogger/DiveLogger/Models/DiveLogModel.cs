@@ -1,39 +1,94 @@
-﻿using System;
+﻿using DiveLogger.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using Xamarin.Essentials;
 
-namespace DiveLogger.ViewModels
+namespace DiveLogger.Models
 {
-    class DiveLogModel : BaseViewModel
+    public class DiveLogModel : BaseViewModel
     {
 
         #region Properties
 
-        private int diveNumber;
-        private float visibility;
-        private float maxDepth;
-        private TimeSpan duration;
-        private float waterTemp;
-        private TimeSpan totalDiveTime;
+        private string diveNumber;
+        private string visibility;
+        private string maxDepth;
+        private string duration;
+        private string waterTemp;
+        private string totalDiveTime;
         private string diveNotes;
-        private Location location;
+        private string location;
 
-        public int DiveNumber { get; set; }
-        public float Visibility { get; set; }
-        public float MaxDepth { get; set; }
-        public TimeSpan Duration { get; set; }
-        public float WaterTemp { get; set; }
-        public TimeSpan TotalDiveTime { get; set; }
-        public string DiveNotes { get; set; }
-        public Location Location { get; set; }
+        public string DiveNumber
+        {
+            get => diveNumber;
+            set { SetValue(ref diveNumber, value); }
+        }
+        public string Visibility
+        {
+            get => visibility;
+            set { SetValue(ref visibility, value); }
+        }
+        public string MaxDepth
+        {
+            get => maxDepth;
+            set { SetValue(ref maxDepth, value); }
+        }
+        public string Duration
+        {
+            get => duration;
+            set { SetValue(ref duration, value); }
+        }
+        public string WaterTemp
+        {
+            get => waterTemp;
+            set { SetValue(ref waterTemp, value); }
+        }
+        public string TotalDiveTime
+        {
+            get => totalDiveTime;
+            set { SetValue(ref totalDiveTime, value); }
+        }
+        public string DiveNotes
+        {
+            get => diveNotes;
+            set { SetValue(ref diveNotes, value); }
+        }
+        public string Location
+        {
+            get => location;
+            set { SetValue(ref location, value); }
+        }
 
         #endregion
+        //private DiveLogModel diveLog;
+        //public DiveLogModel DiveLog
+        //{
+        //    get => diveLog;
+        //    set
+        //    {
+        //        SetValue(ref diveLog, value);
+        //    }
+        //}
 
         public DiveLogModel()
         {
         }
 
+        public DiveLogModel(string diveNumber, string visibility, string maxDepth,
+            string duration, string waterTemp,
+                string totalDiveTime, string diveNotes, string location)
+        {
+            DiveNumber = diveNumber;
+            Visibility = visibility;
+            MaxDepth = maxDepth;
+            Duration = duration;
+            WaterTemp = waterTemp;
+            TotalDiveTime = totalDiveTime;
+            DiveNotes = diveNotes;
+            Location = location;
+        }
     }
 }

@@ -1,63 +1,46 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Input;
+using DiveLogger.Models;
 using DiveLogger.Utils;
 using Xamarin.Forms;
 
 namespace DiveLogger.ViewModels
 {
-    public class RegisterViewModel : INotifyPropertyChanged
+    public class RegisterViewModel : BaseViewModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-        
+        public ICommand RegisterCommad { get; private set; }
+
         private string username;
         private string password;
         private string passwordConfirm;
         private bool passwordMatch = false;
         public string UserName
         {
-            get => username;
-            set
-            {
-                if (username == value) return;
-                username = value;
-                OnPropertyChanged(nameof(UserName));
-            }
+            get{ return username; }
+            set { SetValue(ref username, value); }
         }
         public string Password
         {
-            get => password;
-            set
-            {
-                if (password == value) return;
-                password = value;
-                OnPropertyChanged(nameof(Password));
-            }
+            get { return password; }
+            set { SetValue(ref password, value); }
         }
         public string PasswordConfirm
         {
-            get => passwordConfirm;
-            set
-            {
-                if (passwordConfirm == value) return;
-                passwordConfirm = value;
-                OnPropertyChanged(nameof(Password));
-            }
+            get { return passwordConfirm; }
+            set { SetValue(ref passwordConfirm, value); }
         }
         public bool PasswordMatch
         {
             get { return passwordMatch; }
-            set
-            {
-                OnPropertyChanged(nameof(PasswordMatch));
-            }
+            set { SetValue(ref passwordMatch, value); }
         }
-        private UserModel user;
 
         public void RegisterUserAsync()
         {
-            user = new UserModel(username, password);
-            if (!DBCollection.Create_User(user))
+            UserModel.user.UserName = username;
+            UserModel.user.Password = password;
+            if (!DBCollection.Create_User(UserModel.user))
             {
                 RegFailedAsync();
             }
@@ -87,22 +70,18 @@ namespace DiveLogger.ViewModels
         private async void RegistrationSuccessAsync()
         {
             await App.Current.MainPage.DisplayAlert("Success", "New user account created!", "Continue");
-            user.StoreLoginDetails();
+            UserModel.user.StoreUserDetails();
             App.Current.MainPage = new Views.MainPage();
         }
 
         private async void RegFailedAsync()
         {
-            await App.Current.MainPage.DisplayAlert("Failed", "Username already taken!", "Try again"); 
+            await App.Current.MainPage.DisplayAlert("Failed", "Username already taken!", "Try again");
             username = "";
             password = "";
             passwordConfirm = "";
         }
 
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this,
-                   new PropertyChangedEventArgs(propertyName));
-        }
     }
 }
+

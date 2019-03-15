@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DiveLogger.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace DiveLogger.Views
 		public DiveLogPage ()
 		{
 			InitializeComponent ();
+            BindingContext = new DiveLogViewModel();
 		}
 	}
 }

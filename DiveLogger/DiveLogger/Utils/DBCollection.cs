@@ -8,14 +8,12 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using Newtonsoft.Json;
+using DiveLogger.Models;
 
 namespace DiveLogger.Utils
 {
     public static class DBCollection
     {
-        private static string userNameList = "userNameList";
-        //private static IMongoCollection<BsonDocument> collection;
-
         private static IMongoCollection<BsonDocument> Get_Collection(string collectionName)
         {
             return DataBaseConnection.DB.GetCollection<BsonDocument>(collectionName);
@@ -35,15 +33,13 @@ namespace DiveLogger.Utils
         {
             var builder = Builders<BsonDocument>.Filter;
             FilterDefinition<BsonDocument> filter = builder.Eq("UserName", user.UserName) & builder.Eq("Password", user.Password);
-            long count = Get_Collection("users").Find(filter).CountDocuments();
-            if(count == 1)
+            object count = Get_Collection("users").Find(filter).CountDocuments();
+            if (count == null || (long) count != 1)
             {
-                return true;
+                return false;
             }
-
-            return false;
+            return true;
         }
-        
 
         public static async System.Threading.Tasks.Task<ObservableCollection<PostViewModel>> GetPostsAsync()
         {
@@ -51,7 +47,6 @@ namespace DiveLogger.Utils
             var obj = documents.ToJson();
             return Newtonsoft.Json.JsonConvert.DeserializeObject<ObservableCollection<PostViewModel>>(obj);
         }
-      
 
         public static void SendPost(PostViewModel post)
         {
@@ -68,6 +63,21 @@ namespace DiveLogger.Utils
             return false;
         }
 
+        public static UserModel GetUserDocFromDB(UserModel user)
+        {
+            var builder = Builders<BsonDocument>.Filter;
+            FilterDefinition<BsonDocument> filter = builder.Eq("UserName", user.UserName) & builder.Eq("Password", user.Password);
+            var userDoc = Get_Collection("users").Find(filter).Project(Builders<BsonDocument>.Projection.Exclude("_id")).Single();
+            var userJson = userDoc.ToJson();
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<UserModel>(userJson);
+        }
+
+        public static void UpdateUser(UserModel user)
+        {
+            var builder = Builders<BsonDocument>.Filter;
+            FilterDefinition<BsonDocument> filter = builder.Eq("UserName", user.UserName) & builder.Eq("Password", user.Password);
+            Get_Collection("users").FindOneAndUpdate(filter, user.ToBsonDocument());
+        }
 
     }
 }

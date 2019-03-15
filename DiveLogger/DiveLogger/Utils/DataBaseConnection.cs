@@ -1,4 +1,5 @@
 ﻿using MongoDB.Driver;
+using System;
 
 namespace DiveLogger.Utils
 {
@@ -8,7 +9,14 @@ namespace DiveLogger.Utils
 
         public static IMongoDatabase Connect()
         {
-           return DB = new  MongoClient("mongodb://divelogger:divelogger123@ds163119.mlab.com:63119/divelogger").GetDatabase("divelogger");
+            try
+            {
+                DB = new MongoClient("mongodb://divelogger:divelogger123@ds163119.mlab.com:63119/divelogger").GetDatabase("divelogger");
+            }catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return DB;
         } 
     }
 }

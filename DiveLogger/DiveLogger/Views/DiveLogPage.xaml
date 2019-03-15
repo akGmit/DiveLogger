@@ -2,57 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DiveLogger.Views.DiveLogPage"
+             xmlns:local="clr-namespace:DiveLogger.ViewModels"
              Title="Dive Log">
     <ContentPage.Resources>
-
+        
     </ContentPage.Resources>
-
-    <!--<ContentPage.Content>
-        <ScrollView>
-            <Frame>
-            <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="DarkGoldenrod">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
-                <Label Text="Dive Number" ></Label>
-                <Entry HorizontalOptions="EndAndExpand" WidthRequest="60"></Entry>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Visibility" ></Label>
-                <Entry ></Entry>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Max Depth" ></Label>
-                <Entry ></Entry>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Duration" ></Label>
-                <Entry ></Entry>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Temperature" ></Label>
-                <Entry ></Entry>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Location" ></Label>
-                <Entry ></Entry>
-            </StackLayout>
-            <StackLayout Orientation="Vertical">
-                <Label Text="Dive Notes" ></Label>
-                <Frame>
-                    <Editor HeightRequest="130">
-                        
-                    </Editor>
-                </Frame>
-            </StackLayout>
-        </StackLayout>
-            </Frame>
-        </ScrollView>
-    </ContentPage.Content>-->
+    
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="menuSave" Order="Primary"  Text="Save Log" Priority="0" />
-       
+        <ToolbarItem Name="menuSave" 
+                     Order="Primary"  
+                     Text="Save Log" 
+                     Priority="0" 
+                     Command="{Binding SaveLogCommand}" 
+                     CommandParameter="{Binding DiveLog}"/>
     </ContentPage.ToolbarItems>
-    <ScrollView>
-        <TableView Intent="Form" HasUnevenRows="True">
+    <!--<ContentPage.BindingContext>
+        <local:DiveLogModel/>
+    </ContentPage.BindingContext>-->
+    <ScrollView Padding="10"  FlowDirection="LeftToRight">
+        <!--<ScrollView.BindingContext>
+            <local:DiveLogViewModel/>
+        </ScrollView.BindingContext>-->
+        <TableView 
+                    Intent="Form" 
+                   HasUnevenRows="True" 
+                   BindingContext="{Binding DiveLog, Mode=TwoWay}">
             <TableRoot>
                 <TableSection Title="Dive Details" >
                     <ViewCell>
@@ -61,8 +35,72 @@
                                 <ColumnDefinition Width="80"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="Dive Number:" HorizontalOptions="StartAndExpand"></Label>
-                            <Entry Grid.Column="1" HorizontalOptions="FillAndExpand"/>
+                            <Label Grid.Column="0" 
+                                   Text="Dive Number:" 
+                                   HorizontalOptions="StartAndExpand"></Label>
+                            <Entry Grid.Column="1" 
+                                   HorizontalOptions="FillAndExpand"
+                                   Text="{Binding Path=DiveNumber}"/>
+                        </Grid>
+                    </ViewCell>
+                    
+                    <ViewCell>
+                        <Grid HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="Visibility:" 
+                                   HorizontalOptions="StartAndExpand"></Label>
+                            <Entry Grid.Column="1" 
+                                   HorizontalOptions="FillAndExpand"
+                                   Text="{Binding Path=Visibility}"/>
+                        </Grid>
+                    </ViewCell>
+                    
+                    <ViewCell>
+                        <Grid HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="Max Depth:" 
+                                   HorizontalOptions="StartAndExpand"></Label>
+                            <Entry Grid.Column="1" 
+                                   HorizontalOptions="FillAndExpand"
+                                   Text="{Binding MaxDepth}"/>
+                        </Grid>
+                    </ViewCell>
+                    
+                    <ViewCell>
+                        <Grid HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="Duration:" 
+                                   HorizontalOptions="StartAndExpand"/>
+                            <Entry Grid.Column="1" 
+                                   HorizontalOptions="FillAndExpand"
+                                   Text="{Binding Path=Duration}"/>
+                        </Grid>
+                    </ViewCell>
+                    
+                    <ViewCell>
+                        <Grid HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="Temperature:" 
+                                   HorizontalOptions="StartAndExpand"></Label>
+                            <Entry Grid.Column="1" 
+                                   HorizontalOptions="FillAndExpand"
+                                   Text="{Binding Path=WaterTemp}"/>
                         </Grid>
 
                     </ViewCell>
@@ -72,61 +110,29 @@
                                 <ColumnDefinition Width="80"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="Visibility:" HorizontalOptions="StartAndExpand"></Label>
-                            <Entry Grid.Column="1" HorizontalOptions="FillAndExpand"/>
+                            <Label Grid.Column="0" 
+                                   Text="Location:" 
+                                   HorizontalOptions="StartAndExpand"></Label>
+                            <Entry Grid.Column="1" 
+                                   HorizontalOptions="FillAndExpand"
+                                   Text="{Binding Path=Location}"/>
                         </Grid>
 
                     </ViewCell>
-                    <ViewCell>
-                        <Grid HorizontalOptions="FillAndExpand">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="80"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="Max Depth:" HorizontalOptions="StartAndExpand"></Label>
-                            <Entry Grid.Column="1" HorizontalOptions="FillAndExpand"/>
-                        </Grid>
-
-                    </ViewCell>
-                    <ViewCell>
-                        <Grid HorizontalOptions="FillAndExpand">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="80"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="Duration:" HorizontalOptions="StartAndExpand"></Label>
-                            <Entry Grid.Column="1" HorizontalOptions="FillAndExpand"/>
-                        </Grid>
-
-                    </ViewCell>
-                    <ViewCell>
-                        <Grid HorizontalOptions="FillAndExpand">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="80"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="Temperature:" HorizontalOptions="StartAndExpand"></Label>
-                            <Entry Grid.Column="1" HorizontalOptions="FillAndExpand"/>
-                        </Grid>
-
-                    </ViewCell>
-                    <ViewCell>
-                        <Grid HorizontalOptions="FillAndExpand">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="80"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="Location:" HorizontalOptions="StartAndExpand"></Label>
-                            <Entry Grid.Column="1" HorizontalOptions="FillAndExpand"/>
-                        </Grid>
-                        
-                    </ViewCell>
-                    </TableSection>
-                <TableSection Title="Dive Notes">
+                </TableSection>
+                
+                <TableSection Title="Dive Notes" >
                     <ViewCell >
-                        <Frame BorderColor="Blue" HasShadow="True" Padding="3">
-                                <Editor Grid.Row="1" HeightRequest="150" VerticalOptions="Fill" BackgroundColor="DimGray">
-                                </Editor>
+                        <Frame BorderColor="Blue" 
+                               HasShadow="True" 
+                               Padding="3" 
+                               CornerRadius="4" >
+                            <Editor 
+                                HeightRequest="150" 
+                                VerticalOptions="FillAndExpand" 
+                                BackgroundColor="FloralWhite"
+                                Text="{Binding Path=DiveNotes}">
+                            </Editor>
                         </Frame>
                     </ViewCell>
                 </TableSection>
