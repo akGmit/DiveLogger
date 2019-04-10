@@ -7,13 +7,30 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using DiveLogger.Models;
+using System.Collections.ObjectModel;
 
 namespace DiveLogger.ViewModels
 {
     
     class DiveSitesViewModel : BaseViewModel
     {
-        private List<DiveSiteModel> diveSites = new List<DiveSiteModel>();
+        public ObservableCollection<DiveSiteModel> diveSites = new ObservableCollection<DiveSiteModel>();
+        private DataTemplate diveSitesDataTemplate = new DataTemplate(() =>
+        {
+            var templateStack = new StackLayout();
+
+            var name = new Label();
+            var location = new Label();
+
+            name.SetBinding(Label.TextProperty, "Name");
+            location.SetBinding(Label.TextProperty, "Location");
+
+            templateStack.Children.Add(name);
+            templateStack.Children.Add(location);
+
+            return new ViewCell { View = templateStack };
+        });
+        private ListView sitesList = new ListView();
         private Xamarin.Forms.Maps.Map mapSites;
         private StackLayout stack;
         public StackLayout Stack
@@ -33,6 +50,15 @@ namespace DiveLogger.ViewModels
             
             //Add map to stack
             stack.Children.Add(mapSites);
+
+            diveSites.Add(new DiveSiteModel("CCCC", "CCCCVVS"));
+            diveSites.Add(new DiveSiteModel("dasdfasd", "CasdfasdfCCCVVS"));
+
+            sitesList.ItemsSource = diveSites;
+            sitesList.ItemTemplate = diveSitesDataTemplate;
+            sitesList.Margin = new Thickness(0, 20, 0, 0);
+
+            stack.Children.Add(sitesList);
         }
 
         private async void InitializeMapAsync()
@@ -55,7 +81,7 @@ namespace DiveLogger.ViewModels
                     new Position(location.Latitude, location.Longitude), Distance.FromMiles(0.3)))
             {
                 IsShowingUser = true,
-                HeightRequest = 100,
+                HeightRequest = 300,
                 WidthRequest = 960,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 MapType = MapType.Satellite
