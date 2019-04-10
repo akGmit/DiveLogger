@@ -54,6 +54,7 @@
     <RootPropertyPathName Name="TextColor" />
     <RootPropertyPathName Name="ImageSource" />
     <RootPropertyPathName Name="Value" />
+    <RootPropertyPathName Name="AutomationId" />
     <RootPropertyPathName Name="Cell" />
     <RootPropertyPathName Name="RenderHeight" />
     <RootPropertyPathName Name="View" />
@@ -297,6 +298,8 @@
       <RootMethod Name="SetHelpText" />
       <RootMethod Name="GetLabeledBy" />
       <RootMethod Name="SetLabeledBy" />
+      <RootMethod Name="GetAutomationId" />
+      <RootMethod Name="SetAutomationId" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Foreground" />

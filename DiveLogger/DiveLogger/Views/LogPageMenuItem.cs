@@ -13,7 +13,6 @@ namespace DiveLogger.Views
         public LogPageMenuItem()
         {
             TargetType = typeof(DiveLogPage);
-            
         }
         public int Id { get; set; }
         public string Title { get; set; }

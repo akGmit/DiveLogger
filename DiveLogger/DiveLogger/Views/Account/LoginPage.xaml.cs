@@ -13,7 +13,7 @@ namespace DiveLogger.Views.Account
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class LoginPage : ContentPage
 	{
-		public LoginPage ()
+        public LoginPage ()
 		{
 			InitializeComponent ();
             BindingContext = new LoginViewModel();

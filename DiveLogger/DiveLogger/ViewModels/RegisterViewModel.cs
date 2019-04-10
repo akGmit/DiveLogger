@@ -23,7 +23,7 @@ namespace DiveLogger.ViewModels
         public string Password
         {
             get { return password; }
-            set { SetValue(ref password, value); }
+            set => SetValue(ref password, value);
         }
         public string PasswordConfirm
         {

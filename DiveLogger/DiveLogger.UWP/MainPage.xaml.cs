@@ -20,6 +20,8 @@ namespace DiveLogger.UWP
         public MainPage()
         {
             this.InitializeComponent();
+            //Maps initialization code for UWP
+            Xamarin.FormsMaps.Init("kpgCqh22Qwq3W2v5tGwV~EOsieMCqDf3DpPfwO3cLZg~Ar8CYRYsxLojhNnDbyzdcHS8CIC-5KHtrh9HpVsrjmCLiwe01G-aENcuQaIN5nOc");
 
             LoadApplication(new DiveLogger.App());
         }

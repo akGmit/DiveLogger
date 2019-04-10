@@ -10,12 +10,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MongoDB.Driver" Version="2.7.3" />
+    <Compile Remove="Views\FriendsPage.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\FriendsPage.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FirebaseAuthentication.net" Version="3.2.0" />
+    <PackageReference Include="FirebaseDatabase.net" Version="4.0.1" />
+    <PackageReference Include="MongoDB.Driver" Version="2.8.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-    <PackageReference Include="NUnit.Console" Version="3.9.0" />
-    <PackageReference Include="NUnit.ConsoleRunner" Version="3.9.0" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
+    <PackageReference Include="NUnit.Console" Version="3.10.0" />
+    <PackageReference Include="NUnit.ConsoleRunner" Version="3.10.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.293080" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="3.6.0.293080" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,9 +38,6 @@
   <ItemGroup>
     <Compile Update="Views\Account\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\FriendsPage.xaml.cs">
-      <DependentUpon>FriendsPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\LogPageMenuItem.cs">
       <SubType>Code</SubType>
@@ -59,9 +67,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\DiveStatisticsPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\FriendsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\LogPage.xaml">

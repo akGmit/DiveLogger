@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:pages="clr-namespace:DiveLogger.Views"   
-             x:Class="DiveLogger.Views.MainPage"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:pages="clr-namespace:DiveLogger.Views"   
+            x:Class="DiveLogger.Views.MainPage"
+            xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core"
+            windows:TabbedPage.HeaderIconsEnabled="true"
             Style="{StaticResource TabsStyle}"
             >
         <pages:DiveSitesPage />
         <pages:DiversBoardPage/>
         <pages:LogPage/>
-        <pages:FriendsPage/>
         <pages:ProfilePage/>
 </TabbedPage>

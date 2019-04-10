@@ -4,27 +4,27 @@
              x:Class="DiveLogger.Views.DiveLogPage"
              xmlns:local="clr-namespace:DiveLogger.ViewModels"
              Title="Dive Log">
-    <ContentPage.Resources>
-        
-    </ContentPage.Resources>
-    
+   
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="menuSave" 
                      Order="Primary"  
                      Text="Save Log" 
-                     Priority="0" 
+                     Priority="0"
+                     Icon="iconDives.png"
                      Command="{Binding SaveLogCommand}" 
                      CommandParameter="{Binding DiveLog}"/>
     </ContentPage.ToolbarItems>
     <!--<ContentPage.BindingContext>
         <local:DiveLogModel/>
     </ContentPage.BindingContext>-->
+    
     <ScrollView Padding="10"  FlowDirection="LeftToRight">
+        
         <!--<ScrollView.BindingContext>
             <local:DiveLogViewModel/>
         </ScrollView.BindingContext>-->
         <TableView 
-                    Intent="Form" 
+                   Intent="Form" 
                    HasUnevenRows="True" 
                    BindingContext="{Binding DiveLog, Mode=TwoWay}">
             <TableRoot>

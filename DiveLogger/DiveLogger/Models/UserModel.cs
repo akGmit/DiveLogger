@@ -12,15 +12,19 @@ namespace DiveLogger.Models
         public string UserName { get; set; }
         public string Password { get; set; }
         public List<DiveLogModel> DiveLogs { get; set; } = new List<DiveLogModel>();
-        public DiveLogModel[] userDiveLogsArrr { get; set; }
-        public static UserModel user = new UserModel(UserName, Password, DiveLogs);
+        public static UserModel user = new UserModel();
 
-        //public UserModel(string userName, string password)
-        //{
-        //    UserName = userName;
-        //    Password = password;
+        public UserModel()
+        {
 
-        //}
+        }
+
+        public UserModel(string userName, string password)
+        {
+            UserName = userName;
+            Password = password;
+
+        }
 
         public UserModel(string UserName, string Password, List<DiveLogModel> diveLogs)
         {

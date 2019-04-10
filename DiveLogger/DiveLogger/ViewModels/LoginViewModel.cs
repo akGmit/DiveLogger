@@ -8,7 +8,6 @@ namespace DiveLogger.ViewModels
 {
     class LoginViewModel : BaseViewModel
     {
-        private UserModel user;
         private string password;
         private string username;
 
@@ -27,7 +26,8 @@ namespace DiveLogger.ViewModels
         {
             UserModel.user.UserName = UserName;
             UserModel.user.Password = Password;
-            bool isValid = DBCollection.LogIn(user);
+            //user = new UserModel(UserName, Password);
+            bool isValid = DBCollection.LogIn(UserModel.user);
 
             if (isValid) LogInSuccesful();
             else LogInFailedAsync();
@@ -42,7 +42,7 @@ namespace DiveLogger.ViewModels
 
         private void LogInSuccesful()
         {
-            user.StoreUserDetails();
+            UserModel.user.StoreUserDetails();
             App.Current.MainPage = new Views.MainPage();
         }
     }

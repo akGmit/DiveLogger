@@ -25,7 +25,6 @@ C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\DiversBoardPage.xaml.g.cs
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\DiveSitesPage.xaml.g.cs
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\DiveStatisticsPage.xaml.g.cs
-C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\FriendsPage.xaml.g.cs
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\LogPage.xaml.g.cs
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\LogPageMaster.xaml.g.cs
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
@@ -34,8 +33,8 @@ C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.csproj.CoreCompileInputs.cache
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.AssemblyInfoInputs.cache
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.AssemblyInfo.cs
-C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.csproj.CopyComplete
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.dll
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.pdb
+C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.csprojAssemblyReference.cache

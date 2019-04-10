@@ -7,8 +7,8 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android;
-
-
+using Android.Support.V4.Content;
+using Android.Support.V4.App;
 
 namespace DiveLogger.Droid
 {
@@ -20,10 +20,27 @@ namespace DiveLogger.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             
-
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            //Initialization code for Android maps
+            Xamarin.FormsMaps.Init(this, savedInstanceState);
+
             LoadApplication(new App());
+        }
+
+        protected override void OnStart()
+        {
+            base.OnStart();
+
+            if (ContextCompat.CheckSelfPermission(this, Manifest.Permission_group.Location) != Permission.Granted)
+            {
+                ActivityCompat.RequestPermissions(this, new String[] { Manifest.Permission.AccessCoarseLocation, Manifest.Permission.AccessFineLocation }, 0);
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("Permission Granted!!!");
+            }
         }
     }
 }
