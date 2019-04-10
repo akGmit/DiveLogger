@@ -14,6 +14,9 @@ C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\an
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\android\assets\Mono.Android.dll
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\android\assets\mscorlib.dll
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\android\assets\Newtonsoft.Json.dll
+C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\android\assets\Plugin.CurrentActivity.dll
+C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\android\assets\Plugin.Geolocator.dll
+C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\android\assets\Plugin.Permissions.dll
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\android\assets\System.Buffers.dll
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\android\assets\System.ComponentModel.Composition.dll
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\android\assets\System.ComponentModel.DataAnnotations.dll

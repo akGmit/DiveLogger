@@ -1,1 +1,0 @@
-C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\DiveLogger.UWP.csproj;x86

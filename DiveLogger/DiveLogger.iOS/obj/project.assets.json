@@ -211,6 +211,15 @@
       "NUnit.Extension.VSProjectLoader/3.8.0": {
         "type": "package"
       },
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "compile": {
@@ -870,6 +879,18 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "3.0.0.12"
+        },
+        "compile": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -1032,6 +1053,7 @@
           "NUnit.Console": "3.10.0",
           "NUnit.ConsoleRunner": "3.10.0",
           "Newtonsoft.Json": "12.0.1",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.6.0.293080",
           "Xamarin.Forms.Maps": "3.6.0.293080"
@@ -1254,6 +1276,15 @@
       "NUnit.Extension.VSProjectLoader/3.8.0": {
         "type": "package"
       },
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "compile": {
@@ -1795,6 +1826,18 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "3.0.0.12"
+        },
+        "compile": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -1957,6 +2000,7 @@
           "NUnit.Console": "3.10.0",
           "NUnit.ConsoleRunner": "3.10.0",
           "Newtonsoft.Json": "12.0.1",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.6.0.293080",
           "Xamarin.Forms.Maps": "3.6.0.293080"
@@ -2179,6 +2223,15 @@
       "NUnit.Extension.VSProjectLoader/3.8.0": {
         "type": "package"
       },
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "compile": {
@@ -2720,6 +2773,18 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "3.0.0.12"
+        },
+        "compile": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -2882,6 +2947,7 @@
           "NUnit.Console": "3.10.0",
           "NUnit.ConsoleRunner": "3.10.0",
           "Newtonsoft.Json": "12.0.1",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.6.0.293080",
           "Xamarin.Forms.Maps": "3.6.0.293080"
@@ -3104,6 +3170,15 @@
       "NUnit.Extension.VSProjectLoader/3.8.0": {
         "type": "package"
       },
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "compile": {
@@ -3645,6 +3720,18 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "3.0.0.12"
+        },
+        "compile": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -3807,6 +3894,7 @@
           "NUnit.Console": "3.10.0",
           "NUnit.ConsoleRunner": "3.10.0",
           "Newtonsoft.Json": "12.0.1",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.6.0.293080",
           "Xamarin.Forms.Maps": "3.6.0.293080"
@@ -4149,6 +4237,29 @@
         "nunit.extension.vsprojectloader.3.8.0.nupkg.sha512",
         "nunit.extension.vsprojectloader.nuspec",
         "tools/vs-project-loader.dll"
+      ]
+    },
+    "Plugin.Permissions/3.0.0.12": {
+      "sha512": "VrYqI/ufk3bH6gTP1JJlLByjhS0CHu3riKmdozhX9/qXA9hlvLolmcqKJdyAqpzmrVC74m3ZtirUBIrBxvT1Lw==",
+      "type": "package",
+      "path": "plugin.permissions/3.0.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/Plugin.Permissions.dll",
+        "lib/monoandroid71/Plugin.Permissions.xml",
+        "lib/netstandard1.0/Plugin.Permissions.dll",
+        "lib/netstandard1.0/Plugin.Permissions.xml",
+        "lib/netstandard2.0/Plugin.Permissions.dll",
+        "lib/netstandard2.0/Plugin.Permissions.xml",
+        "lib/uap10.0.10240/Plugin.Permissions.dll",
+        "lib/uap10.0.10240/Plugin.Permissions.pri",
+        "lib/uap10.0.10240/Plugin.Permissions.xml",
+        "lib/xamarinios10/Plugin.Permissions.dll",
+        "lib/xamarinios10/Plugin.Permissions.xml",
+        "plugin.permissions.3.0.0.12.nupkg.sha512",
+        "plugin.permissions.nuspec",
+        "readme.txt"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -7525,6 +7636,33 @@
         "ref/xamarinwatchos10/_._",
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
+      ]
+    },
+    "Xam.Plugin.Geolocator/4.5.0.6": {
+      "sha512": "Ro7peBDxsDXPc7J7yLx0ekAcXIfVTAXj/rXiBKiTgZ4Lm7KZJIU8PXOCcI4JztzT3MQrL8Rmka48il/ix0pwoA==",
+      "type": "package",
+      "path": "xam.plugin.geolocator/4.5.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/Plugin.Geolocator.dll",
+        "lib/monoandroid71/Plugin.Geolocator.xml",
+        "lib/netstandard1.0/Plugin.Geolocator.dll",
+        "lib/netstandard1.0/Plugin.Geolocator.xml",
+        "lib/netstandard2.0/Plugin.Geolocator.dll",
+        "lib/netstandard2.0/Plugin.Geolocator.xml",
+        "lib/uap10.0.10240/Plugin.Geolocator.dll",
+        "lib/uap10.0.10240/Plugin.Geolocator.pri",
+        "lib/uap10.0.10240/Plugin.Geolocator.xml",
+        "lib/xamarinios10/Plugin.Geolocator.dll",
+        "lib/xamarinios10/Plugin.Geolocator.xml",
+        "lib/xamarinmac20/Plugin.Geolocator.dll",
+        "lib/xamarinmac20/Plugin.Geolocator.xml",
+        "lib/xamarintvos10/Plugin.Geolocator.dll",
+        "lib/xamarintvos10/Plugin.Geolocator.xml",
+        "readme.txt",
+        "xam.plugin.geolocator.4.5.0.6.nupkg.sha512",
+        "xam.plugin.geolocator.nuspec"
       ]
     },
     "Xamarin.Essentials/1.1.0": {

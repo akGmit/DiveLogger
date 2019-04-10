@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "2ab5228740225de64840040d97d54550288967ff"
+    "signature": "7dfa972f78efb2353e59652e58403db3ad5401c5"
   },
   "compilationOptions": {},
   "targets": {
@@ -16,6 +16,7 @@
           "NUnit.Console": "3.10.0",
           "NUnit.ConsoleRunner": "3.10.0",
           "Newtonsoft.Json": "12.0.1",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.6.0.293080",
           "Xamarin.Forms.Maps": "3.6.0.293080",
@@ -1031,6 +1032,14 @@
           }
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "runtime": {
+          "lib/netstandard2.0/Plugin.Geolocator.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -1756,6 +1765,13 @@
       "sha512": "sha512-k/+g4b7vjdd4aix83sTgC9VG6oXYKAktSfNIJUNGxPEj7ryEOfzHHhfnmsZvjxawwcD9HyWXKCXmPjX8U4zeSw==",
       "path": "system.threading.threadpool/4.3.0",
       "hashPath": "system.threading.threadpool.4.3.0.nupkg.sha512"
+    },
+    "Xam.Plugin.Geolocator/4.5.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ro7peBDxsDXPc7J7yLx0ekAcXIfVTAXj/rXiBKiTgZ4Lm7KZJIU8PXOCcI4JztzT3MQrL8Rmka48il/ix0pwoA==",
+      "path": "xam.plugin.geolocator/4.5.0.6",
+      "hashPath": "xam.plugin.geolocator.4.5.0.6.nupkg.sha512"
     },
     "Xamarin.Essentials/1.1.0": {
       "type": "package",

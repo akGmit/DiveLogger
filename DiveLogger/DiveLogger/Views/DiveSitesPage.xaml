@@ -6,8 +6,6 @@
              Icon="iconDives.png"
              Title="Dives">
     <ContentPage.Content>
-        <ScrollView>
-            <maps:Map BindingContext="{Binding SitesMap, Mode=TwoWay}"/>
-        </ScrollView>
+        <ContentView Content="{Binding Stack}"/>
     </ContentPage.Content>
 </ContentPage>

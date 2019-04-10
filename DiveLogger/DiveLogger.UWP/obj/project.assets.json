@@ -1212,6 +1212,18 @@
           }
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -1273,6 +1285,7 @@
           "NUnit.Console": "3.10.0",
           "NUnit.ConsoleRunner": "3.10.0",
           "Newtonsoft.Json": "12.0.1",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.6.0.293080",
           "Xamarin.Forms.Maps": "3.6.0.293080"
@@ -2794,6 +2807,18 @@
           "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -2855,6 +2880,7 @@
           "NUnit.Console": "3.10.0",
           "NUnit.ConsoleRunner": "3.10.0",
           "Newtonsoft.Json": "12.0.1",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.6.0.293080",
           "Xamarin.Forms.Maps": "3.6.0.293080"
@@ -4444,6 +4470,18 @@
           "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -4505,6 +4543,7 @@
           "NUnit.Console": "3.10.0",
           "NUnit.ConsoleRunner": "3.10.0",
           "Newtonsoft.Json": "12.0.1",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.6.0.293080",
           "Xamarin.Forms.Maps": "3.6.0.293080"
@@ -6091,6 +6130,18 @@
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -6152,6 +6203,7 @@
           "NUnit.Console": "3.10.0",
           "NUnit.ConsoleRunner": "3.10.0",
           "Newtonsoft.Json": "12.0.1",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.6.0.293080",
           "Xamarin.Forms.Maps": "3.6.0.293080"
@@ -7673,6 +7725,18 @@
           "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -7734,6 +7798,7 @@
           "NUnit.Console": "3.10.0",
           "NUnit.ConsoleRunner": "3.10.0",
           "Newtonsoft.Json": "12.0.1",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.6.0.293080",
           "Xamarin.Forms.Maps": "3.6.0.293080"
@@ -9323,6 +9388,18 @@
           "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -9384,6 +9461,7 @@
           "NUnit.Console": "3.10.0",
           "NUnit.ConsoleRunner": "3.10.0",
           "Newtonsoft.Json": "12.0.1",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.6.0.293080",
           "Xamarin.Forms.Maps": "3.6.0.293080"
@@ -10905,6 +10983,18 @@
           "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -10966,6 +11056,7 @@
           "NUnit.Console": "3.10.0",
           "NUnit.ConsoleRunner": "3.10.0",
           "Newtonsoft.Json": "12.0.1",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.6.0.293080",
           "Xamarin.Forms.Maps": "3.6.0.293080"
@@ -12555,6 +12646,18 @@
           "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -12616,6 +12719,7 @@
           "NUnit.Console": "3.10.0",
           "NUnit.ConsoleRunner": "3.10.0",
           "Newtonsoft.Json": "12.0.1",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.6.0.293080",
           "Xamarin.Forms.Maps": "3.6.0.293080"
@@ -20556,6 +20660,33 @@
         "win2d.uwp.nuspec"
       ]
     },
+    "Xam.Plugin.Geolocator/4.5.0.6": {
+      "sha512": "Ro7peBDxsDXPc7J7yLx0ekAcXIfVTAXj/rXiBKiTgZ4Lm7KZJIU8PXOCcI4JztzT3MQrL8Rmka48il/ix0pwoA==",
+      "type": "package",
+      "path": "xam.plugin.geolocator/4.5.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/Plugin.Geolocator.dll",
+        "lib/monoandroid71/Plugin.Geolocator.xml",
+        "lib/netstandard1.0/Plugin.Geolocator.dll",
+        "lib/netstandard1.0/Plugin.Geolocator.xml",
+        "lib/netstandard2.0/Plugin.Geolocator.dll",
+        "lib/netstandard2.0/Plugin.Geolocator.xml",
+        "lib/uap10.0.10240/Plugin.Geolocator.dll",
+        "lib/uap10.0.10240/Plugin.Geolocator.pri",
+        "lib/uap10.0.10240/Plugin.Geolocator.xml",
+        "lib/xamarinios10/Plugin.Geolocator.dll",
+        "lib/xamarinios10/Plugin.Geolocator.xml",
+        "lib/xamarinmac20/Plugin.Geolocator.dll",
+        "lib/xamarinmac20/Plugin.Geolocator.xml",
+        "lib/xamarintvos10/Plugin.Geolocator.dll",
+        "lib/xamarintvos10/Plugin.Geolocator.xml",
+        "readme.txt",
+        "xam.plugin.geolocator.4.5.0.6.nupkg.sha512",
+        "xam.plugin.geolocator.nuspec"
+      ]
+    },
     "Xamarin.Essentials/1.1.0": {
       "sha512": "W0XOt1dNMAE2POcsVotoKDDy5FdAOnR0qULKl6WI4kQEMxQ1sp84DsSU5iacV7oQUMuPhUBAm/3ywks0HO1QrQ==",
       "type": "package",
@@ -20813,6 +20944,7 @@
       "NUnit.Console >= 3.10.0",
       "NUnit.ConsoleRunner >= 3.10.0",
       "Newtonsoft.Json >= 12.0.1",
+      "Xam.Plugin.Geolocator >= 4.5.0.6",
       "Xamarin.Essentials >= 1.1.0",
       "Xamarin.Forms >= 3.6.0.293080",
       "Xamarin.Forms.Maps >= 3.6.0.293080"
@@ -20886,6 +21018,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.1, )"
+          },
+          "Xam.Plugin.Geolocator": {
+            "target": "Package",
+            "version": "[4.5.0.6, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",
