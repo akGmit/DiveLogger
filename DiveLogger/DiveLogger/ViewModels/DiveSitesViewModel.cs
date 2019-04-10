@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+using DiveLogger.Models;
 
 namespace DiveLogger.ViewModels
 {
     
     class DiveSitesViewModel : BaseViewModel
     {
+        private List<DiveSiteModel> diveSites = new List<DiveSiteModel>();
         private Xamarin.Forms.Maps.Map mapSites;
         private StackLayout stack;
         public StackLayout Stack
@@ -20,6 +22,8 @@ namespace DiveLogger.ViewModels
             set
             { SetValue(ref stack, value); }
         }
+
+        //CONSTRUCTOR
         public DiveSitesViewModel()
         {
             InitializeMapAsync();
@@ -27,37 +31,25 @@ namespace DiveLogger.ViewModels
             //Initialize stack
             stack = new StackLayout();
             
+            //Add map to stack
             stack.Children.Add(mapSites);
         }
 
         private async void InitializeMapAsync()
         {
+            //Get current user location
+            //If exception thrown, set location to default
             Location location = new Location();
             try
             {
                 location = await Geolocation.GetLastKnownLocationAsync();
-
-                if (location != null)
-                {
-                    Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
-                }
-            }
-            catch (FeatureNotSupportedException fnsEx)
-            {
-                // Handle not supported on device exception
-            }
-            catch (FeatureNotEnabledException fneEx)
-            {
-                // Handle not enabled on device exception
-            }
-            catch (PermissionException pEx)
-            {
-                // Handle permission exception
             }
             catch (Exception ex)
             {
-                // Unable to get location
+                location = new Location(37, -122);
             } 
+
+            //Initialize map to location
             mapSites = new Xamarin.Forms.Maps.Map(
             MapSpan.FromCenterAndRadius(
                     new Position(location.Latitude, location.Longitude), Distance.FromMiles(0.3)))

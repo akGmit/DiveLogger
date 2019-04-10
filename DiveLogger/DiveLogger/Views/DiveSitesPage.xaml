@@ -5,7 +5,10 @@
              x:Class="DiveLogger.Views.DiveSitesPage"
              Icon="iconDives.png"
              Title="Dives">
+    
     <ContentPage.Content>
-        <ContentView Content="{Binding Stack}"/>
+        <ContentView Content="{Binding Stack}">
+            
+        </ContentView>
     </ContentPage.Content>
 </ContentPage>
