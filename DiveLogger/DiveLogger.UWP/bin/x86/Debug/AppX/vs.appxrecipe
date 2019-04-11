@@ -30,17 +30,29 @@
     <AppXManifest Include="C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-10T09:22:38.381</Modified>
+      <Modified>2019-04-11T04:10:36.032</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\DiveLogger.UWP.exe">
       <PackagePath>entrypoint\DiveLogger.UWP.exe</PackagePath>
-      <Modified>2019-04-10T09:22:14.288</Modified>
+      <Modified>2019-04-11T04:10:33.812</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\o\.nuget\packages\dnsclient\1.2.0\lib\netstandard2.0\DnsClient.dll">
       <PackagePath>DnsClient.dll</PackagePath>
       <Modified>2018-08-15T22:47:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\o\.nuget\packages\firebaseauthentication.net\3.2.0\lib\netstandard1.1\Firebase.Auth.dll">
+      <PackagePath>Firebase.Auth.dll</PackagePath>
+      <Modified>2018-12-07T21:04:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\o\.nuget\packages\firebasedatabase.net\4.0.1\lib\netstandard2.0\Firebase.dll">
+      <PackagePath>Firebase.dll</PackagePath>
+      <Modified>2019-01-31T12:27:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\o\.nuget\packages\litedb\4.1.4\lib\netstandard2.0\LiteDB.dll">
+      <PackagePath>LiteDB.dll</PackagePath>
+      <Modified>2018-06-11T18:04:22.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\o\.nuget\packages\mongodb.bson\2.8.0\lib\netstandard1.5\MongoDB.Bson.dll">
       <PackagePath>MongoDB.Bson.dll</PackagePath>
@@ -62,9 +74,17 @@
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2019-03-12T22:22:24.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\o\.nuget\packages\system.reactive\4.0.0\lib\uap10.0.16299\System.Reactive.dll">
+      <PackagePath>System.Reactive.dll</PackagePath>
+      <Modified>2018-05-25T15:44:28.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\o\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
       <Modified>2016-11-30T02:58:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\o\.nuget\packages\xam.plugin.geolocator\4.5.0.6\lib\uap10.0.10240\Plugin.Geolocator.dll">
+      <PackagePath>Plugin.Geolocator.dll</PackagePath>
+      <Modified>2018-05-23T10:27:48.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\o\.nuget\packages\xamarin.essentials\1.1.0\lib\uap10.0.16299\Xamarin.Essentials.dll">
       <PackagePath>Xamarin.Essentials.dll</PackagePath>
@@ -96,7 +116,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\bin\Debug\netstandard2.0\DiveLogger.dll">
       <PackagePath>DiveLogger.dll</PackagePath>
-      <Modified>2019-04-10T09:21:27.498</Modified>
+      <Modified>2019-04-11T04:10:23.928</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\o\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -263,11 +283,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-10T09:22:13.429</Modified>
+      <Modified>2019-04-11T04:10:33.473</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-10T09:22:13.430</Modified>
+      <Modified>2019-04-11T04:10:33.474</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -279,11 +299,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-04-10T09:22:21.048</Modified>
+      <Modified>2019-04-11T04:07:52.531</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\Core\DiveLogger.UWP.exe">
       <PackagePath>DiveLogger.UWP.exe</PackagePath>
-      <Modified>2019-04-10T09:22:38.308</Modified>
+      <Modified>2019-04-11T04:10:36.021</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -8,6 +8,9 @@ MongoDB.Bson
 MongoDB.Driver.Core
 MongoDB.Driver
 Newtonsoft.Json
+Plugin.CurrentActivity
+Plugin.Geolocator
+Plugin.Permissions
 System.Buffers
 System.Reactive
 System.Runtime
@@ -42,9 +45,6 @@ Xamarin.GooglePlayServices.Base
 Xamarin.GooglePlayServices.Basement
 Xamarin.GooglePlayServices.Maps
 Xamarin.GooglePlayServices.Tasks
-Plugin.CurrentActivity
-Plugin.Geolocator
-Plugin.Permissions
 netstandard
 System.Diagnostics.Debug
 System.Reflection

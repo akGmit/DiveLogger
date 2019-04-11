@@ -5,18 +5,30 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace DiveLogger.Models
 {
-    class DiveSiteModel
+    public class DiveSiteModel
     {
+        [JsonProperty("name")]
         public string Name { get; set; }
-        public string Location { get; set; }
+        [JsonProperty("distance")]
+        public double Distance {get; set;}
+        [JsonProperty("lat")]
+        public double Latitude { get; set; }
+        [JsonProperty("lng")]
+        public double Longitude { get; set; }
+        //public int Id { get; set; }
 
-        public DiveSiteModel(string name, string location)
+        [JsonConstructor]
+        public DiveSiteModel(string name, double distance, double latitude, double longitude)
         {
             Name = name;
-            Location = location;
+            Distance = distance;
+            Latitude = latitude;
+            Longitude = longitude;
+            //Id = id;
         }
     }
 }

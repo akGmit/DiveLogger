@@ -34,7 +34,7 @@ C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.AssemblyInfo.cs
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.csproj.CopyComplete
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\bin\Debug\netstandard2.0\DiveLogger.pdb
-C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.csprojAssemblyReference.cache
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.dll
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.pdb
+C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.csprojAssemblyReference.cache
