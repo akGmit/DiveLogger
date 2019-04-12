@@ -248,5 +248,7 @@ C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\an
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.Android.pdb
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger\bin\Debug\netstandard2.0\DiveLogger.dll
+C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\bin\Debug\DiveLogger.dll.mdb
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\linksrc\DiveLogger.dll.mdb
 C:\Users\o\source\repos\DiveLogger\DiveLogger\DiveLogger.Android\obj\Debug\81\linksrc\Xamarin.Essentials.dll.mdb

@@ -19,18 +19,5 @@ namespace DiveLogger.Views
 			InitializeComponent ();
             BindingContext = new DiveSitesViewModel();
         }
-
-        protected override void OnDisappearing()
-        {
-            (BindingContext as DiveSitesViewModel).StopTimer();
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            (BindingContext as DiveSitesViewModel).GetMapLatAndLong();
-        }
     }
-
-    
 }

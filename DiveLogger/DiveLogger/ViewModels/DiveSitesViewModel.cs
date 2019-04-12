@@ -11,16 +11,15 @@ using System.Collections.ObjectModel;
 using System.Net.Http;
 using Newtonsoft.Json;
 using DiveLogger.Utils;
+using System.Collections;
 
 namespace DiveLogger.ViewModels
 {
     
     public class DiveSitesViewModel : BaseViewModel
     {
-        private double lat;
-        private double lng;
-        private double radius;
-        private bool stopTimer;
+        #region Variables
+        private int counterMapChange = 0;
         private ObservableCollection<DiveSiteModel> diveSites = new ObservableCollection<DiveSiteModel>();
         public ObservableCollection<DiveSiteModel> DiveSites
         {
@@ -43,23 +42,25 @@ namespace DiveLogger.ViewModels
             { SetValue(ref stack, value); }
         }
 
-        //CONSTRUCTOR
+        #endregion
+
+        /// <summary>
+        /// Constructor calling intialization methods, adding creating and displaying UI components.
+        /// </summary>
         public DiveSitesViewModel()
         {
             InitializeListView();
             InitializeMapAsync();
             
-            //Initialize stack
             stack = new StackLayout();
             
-            //Add map to stack
             stack.Children.Add(mapSites);
             stack.Children.Add(SitesList);
         }
-        
-        /**
-         * Method to create data template and listview which holds dive sites.
-         * */
+
+        /// <summary>
+        /// Initialized dive sites list view. Creating data template for a list view.
+        /// </summary>
         private void InitializeListView()
         {
             diveSitesDataTemplate = new DataTemplate(() =>
@@ -85,14 +86,17 @@ namespace DiveLogger.ViewModels
             SitesList.Margin = new Thickness(0, 20, 0, 0);
         }
 
-        /***
-         * Methd to initialize map.
-         * Getting current device location and centering map to it.
-         * Get dive sites at current location.
-         * ***/
+        /// <summary>
+        /// Initializing map.
+        /// </summary>
+        /// <remarks>
+        /// Map is initialized to last known location which is recieved from Coordinates class.
+        /// Setting map properties, add PropertyChanging event to inform about map zooming and panning.
+        /// Dive sites collection and map pins are updated.
+        /// </remarks>
         private async void InitializeMapAsync()
         {
-            Location loc = Geolocation.GetLastKnownLocationAsync().Result;
+            Location loc = await Coordinates.GetLastKnownLocationAsync();
 
             mapSites = new Xamarin.Forms.Maps.Map(
             MapSpan.FromCenterAndRadius(
@@ -102,41 +106,66 @@ namespace DiveLogger.ViewModels
                 HeightRequest = 300,
                 WidthRequest = 960,
                 VerticalOptions = LayoutOptions.FillAndExpand,
-                MapType = MapType.Satellite
+                MapType = MapType.Hybrid
             };
 
+            mapSites.PropertyChanging += MapVisibleRegionChanging; 
+
             DiveSites = await DiveSitesUtil.GetDiveSitesAsync(loc.Latitude, loc.Longitude, 100);
+            UpdatePins();
         }
 
-        /***
-         * Method to start readin map centre coordinates at specified intervals.
-         * **/
-        public void GetMapLatAndLong()
+        /// <summary>
+        /// Method called when map visible region is changing.
+        /// Updating pins and divesites according to map center location.
+        /// </summary>
+        /// <remarks>
+        /// Method keeps record of a counter which limits the frequency of update actions taken.
+        /// </remarks>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MapVisibleRegionChanging(object sender, PropertyChangingEventArgs e)
         {
-            stopTimer = false;
-            Device.StartTimer(TimeSpan.FromSeconds(0.1), () =>
+            counterMapChange++;
+            if (counterMapChange == 10)
+            {
+                UpdatePins();
+                UpdateDiveSitesAsync();
+                counterMapChange = 0;
+            }
+        }
+
+        /// <summary>
+        /// Gets map center coordinates and updates dive sites.
+        /// </summary>
+        private async void UpdateDiveSitesAsync()
+        {
+            if (mapSites.VisibleRegion != null)
+            {
+                MapCoordinates coords = Coordinates.GetMapCoordinates(mapSites.VisibleRegion);
+                DiveSites = await DiveSitesUtil.GetDiveSitesAsync(coords.Latitude, coords.Longitude, coords.Radius);
+            }
+        }
+
+        /// <summary>
+        /// Method updating and droping pins on map. 
+        /// </summary>
+        /// <remarks>
+        /// Map pins list is cleared first and then populated from dive sites collection.
+        /// </remarks>
+        private void UpdatePins()
+        {
+            mapSites.Pins.Clear();
+            foreach (DiveSiteModel site in diveSites)
+            {
+                var pin = new Pin
                 {
-                    if (stopTimer)
-                        return false;
-
-                    MapSpan mapSpan = mapSites.VisibleRegion;
-
-                    if (mapSpan != null)
-                    {
-                        lat = mapSpan.Center.Latitude;
-                        lng = mapSpan.Center.Longitude;
-                        radius = mapSpan.Radius.Kilometers;
-                        Console.WriteLine(lat + " " + lng + " " + radius);
-                    }
-                    return true;
-                });
-        }
-        /**
-         * Start/stop timer which is responsible for running GetMapLatAndLong() method logic
-         * **/
-        public void StopTimer()
-        {
-            stopTimer = true;
+                    Type = PinType.Generic,
+                    Position = new Position(site.Latitude, site.Longitude),
+                    Label = site.Name
+                };
+                mapSites.Pins.Add(pin);
+            }
         }
     }
 }

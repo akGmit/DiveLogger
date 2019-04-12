@@ -8,7 +8,6 @@
     
     <ContentPage.Content>
         <ContentView Content="{Binding Stack}">
-            
         </ContentView>
     </ContentPage.Content>
 </ContentPage>

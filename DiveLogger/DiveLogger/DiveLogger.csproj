@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Location.cs" />
     <Compile Remove="Views\FriendsPage.xaml.cs" />
   </ItemGroup>
 
