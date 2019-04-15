@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiveLogger.Views.RootPage">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <SearchBar />
+            <Button Text="OK"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+        <RelativeLayout CascadeInputTransparent="True" BackgroundColor="DeepSkyBlue" IsClippedToBounds="True">
+            <BoxView Color="Gray" x:Name="redBox" 
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                         Property=Height,Factor=.15,Constant=-30}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent,Property=Height,Factor=.8,Constant=14}" >
+               
+            </BoxView>
+            <Frame  Padding="15"  Opacity="10" CornerRadius="25" 
+                    BorderColor="NavajoWhite" HasShadow="True" 
+                    BackgroundColor="MediumAquamarine"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+                        ElementName=redBox,Property=Y,Factor=1,Constant=35}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
+                        ElementName=redBox,Property=X,Factor=1,Constant=20}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent,Property=Width,Factor=.5,Constant=0}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent,Property=Height,Factor=.7,Constant=20}">
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0,20,0,0">
+                    <Button Text="Dive logs"
+                            Command="{Binding DiveLogPage}"></Button>
+                    <Button Text="Find dive sites"
+                            Command="{Binding DiveSitePage}"></Button>
+                    <Button Text="Message board"
+                            Command="{Binding MessageBoardPage}"></Button>
+                    <Button Text="Settings"
+                            Command="{Binding SettingsPage}"></Button>
+                </StackLayout>
+            </Frame>
+        </RelativeLayout>
+</ContentPage>

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 /// <summary>
 /// View model for Auth page. 
@@ -32,12 +33,13 @@ namespace DiveLogger.ViewModels
             try
             {
                 var t = await fb.Register(Email, Password);
-                App.Current.MainPage = new MainPage();
+                App.Current.MainPage = new NavigationPage(new RootPage());
             } catch (Firebase.Auth.FirebaseAuthException e)
             {
                 await App.Current.MainPage.DisplayAlert("Failed", "Sign up went wrong!\nReason: " + e.Reason, "Try again");
             }
-            
+            catch (Exception e) { }
+
         }
 
         private async void LoginAsync(object obj)
@@ -45,13 +47,15 @@ namespace DiveLogger.ViewModels
             FireBaseAuthUtil fb = new FireBaseAuthUtil();
             try
             {
+                Settings.FirebaseAuthJson = null;
                 var t = await fb.Login(Email, Password);
-                App.Current.MainPage = new MainPage();
+                App.Current.MainPage = new NavigationPage(new RootPage());
             }
             catch (Firebase.Auth.FirebaseAuthException e)
             {
                 await App.Current.MainPage.DisplayAlert("Failed", "Log in went wrong!\nReason: " + e.Reason, "Try again");
             }
+            catch (Exception e) { }
         }
     }
 }

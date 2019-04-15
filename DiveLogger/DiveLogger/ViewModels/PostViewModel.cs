@@ -9,19 +9,11 @@ namespace DiveLogger.ViewModels
 {
     public class PostViewModel : BaseViewModel
     {
-        private string title;
-        private string post;
+        //private string title;
+        //private string post;
 
-        public string Title
-        {
-            get { return title; }
-            set { SetValue(ref title, value); }
-        }
-        public string Post
-        {
-            get { return post; }
-            set { SetValue(ref post, value); }
-        }
+        public string Title { get; set; }
+        public string Post { get; set; }
 
         public PostViewModel() { }
 
@@ -36,9 +28,9 @@ namespace DiveLogger.ViewModels
             return await DBCollection.GetPostsAsync();
         }
 
-        public static void SendPost(PostViewModel post)
+        public static void SendPost(PostViewModel Post)
         {
-            DBCollection.SendPost(post);
+            DBCollection.SendPost(Post);
         }
     }
 }

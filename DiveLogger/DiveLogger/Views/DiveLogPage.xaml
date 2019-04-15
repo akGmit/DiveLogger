@@ -4,16 +4,14 @@
              x:Class="DiveLogger.Views.DiveLogPage"
              xmlns:local="clr-namespace:DiveLogger.ViewModels"
              Title="Dive Log">
-   
-    <!--<ContentPage.BindingContext>
-        <local:DiveLogModel/>
-    </ContentPage.BindingContext>-->
-    
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+            <SearchBar />
+            <Button Text="OK"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
     <ScrollView Padding="10"  FlowDirection="LeftToRight">
-        
-        <!--<ScrollView.BindingContext>
-            <local:DiveLogViewModel/>
-        </ScrollView.BindingContext>-->
         <TableView 
                    Intent="Form" 
                    HasUnevenRows="True" 

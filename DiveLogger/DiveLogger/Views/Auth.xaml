@@ -2,9 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DiveLogger.Views.Auth">
-    <ContentPage.Content>
         <StackLayout>
-            <Grid Style="{StaticResource LoginPageStyle}">
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -35,19 +34,19 @@
 
                     <Label  Grid.Row="1" Grid.Column="0" 
 				    Text="Email:"
-                    Style="{StaticResource LabelStyle}">
+                   >
                     </Label>
 
                     <Entry  x:Name="entryLogInUsername"
 				    Grid.Row="1" Grid.Column="1"
                     Text="{Binding Email, Mode=TwoWay}"
                     Placeholder="Required field"
-				    Style="{StaticResource EntryStyle}">
+				    >
                     </Entry>
 
                     <Label  Grid.Row="2" Grid.Column="0" 
 				    Text="Password:"
-                    Style="{StaticResource LabelStyle}">
+                    >
                     </Label>
 
                     <Entry  x:Name="entryLogInPassword"
@@ -55,7 +54,7 @@
                     Text="{Binding Password, Mode=TwoWay}"
                     Placeholder="Required field"
 				    IsPassword="True"
-				    Style="{StaticResource EntryStyle}">
+				   >
                     </Entry>
                 </Grid>
                 <StackLayout x:Name="slButtons" 
@@ -69,5 +68,4 @@
                 </StackLayout>
             </Grid>
         </StackLayout>
-    </ContentPage.Content>
 </ContentPage>

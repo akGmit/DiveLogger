@@ -19,31 +19,5 @@ namespace DiveLogger.Views
             InitializeComponent();
             BindingContext = new AuthViewModel();
 		}
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            AutoLogin();
-        }
-        /// <summary>
-        /// Check for firebase auth token, if exists and valid, load MainPage.
-        /// </summary>
-        private async void AutoLogin()
-        {
-            FireBaseAuthUtil auth = new FireBaseAuthUtil();
-            try
-            {
-                await auth.Login("init", "init");
-                await Navigation.PushModalAsync(new MainPage());
-            }
-            catch (Firebase.Auth.FirebaseAuthException e)
-            {
-            }
-            catch (Exception e)
-            {
-            }
-            
-            
-        }
     }
 }

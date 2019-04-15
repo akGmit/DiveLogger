@@ -12,10 +12,12 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using DiveLogger.Utils;
 using System.Collections;
+using Xamarin.Forms.Xaml;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat;
 
 namespace DiveLogger.ViewModels
 {
-    
     public class DiveSitesViewModel : BaseViewModel
     {
         #region Variables
@@ -49,12 +51,9 @@ namespace DiveLogger.ViewModels
         /// </summary>
         public DiveSitesViewModel()
         {
-            InitializeListView();
-            InitializeMapAsync();
-            
             stack = new StackLayout();
-            
-            
+            InitializeMapAsync();
+            InitializeListView();
         }
 
         /// <summary>
@@ -83,6 +82,7 @@ namespace DiveLogger.ViewModels
             SitesList.ItemTemplate = diveSitesDataTemplate;
             SitesList.SetBinding(ListView.ItemsSourceProperty, "DiveSites");
             SitesList.Margin = new Thickness(0, 20, 0, 0);
+
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace DiveLogger.ViewModels
                 MapType = MapType.Hybrid
             };
 
-            mapSites.PropertyChanging += MapVisibleRegionChanging; 
+            mapSites.PropertyChanging += MapVisibleRegionChanging;
 
             DiveSites = await DiveSitesUtil.GetDiveSitesAsync(loc.Latitude, loc.Longitude, 100);
             UpdatePins();

@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiveLogger.UWP", "DiveLogge
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiveLogger", "DiveLogger\DiveLogger\DiveLogger.csproj", "{6FB1AAFC-3FDC-4839-B995-061EE8C03827}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{7C03B3C0-62F2-4450-8911-55BB05D3BDFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{7C03B3C0-62F2-4450-8911-55BB05D3BDFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -361,7 +361,6 @@ Global
 		{7C03B3C0-62F2-4450-8911-55BB05D3BDFE}.Debug|x64.ActiveCfg = Debug|Any CPU
 		{7C03B3C0-62F2-4450-8911-55BB05D3BDFE}.Debug|x64.Build.0 = Debug|Any CPU
 		{7C03B3C0-62F2-4450-8911-55BB05D3BDFE}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{7C03B3C0-62F2-4450-8911-55BB05D3BDFE}.Debug|x86.Build.0 = Debug|Any CPU
 		{7C03B3C0-62F2-4450-8911-55BB05D3BDFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C03B3C0-62F2-4450-8911-55BB05D3BDFE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7C03B3C0-62F2-4450-8911-55BB05D3BDFE}.Release|ARM.ActiveCfg = Release|Any CPU

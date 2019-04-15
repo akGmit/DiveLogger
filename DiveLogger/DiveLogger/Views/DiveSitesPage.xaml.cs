@@ -10,13 +10,13 @@ using Xamarin.Forms.Xaml;
 
 namespace DiveLogger.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DiveSitesPage : ContentPage
-	{
-        
-        public DiveSitesPage ()
-		{
-			InitializeComponent ();
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class DiveSitesPage : ContentPage
+    {
+
+        public DiveSitesPage()
+        {
+            InitializeComponent();
             BindingContext = new DiveSitesViewModel();
         }
     }
