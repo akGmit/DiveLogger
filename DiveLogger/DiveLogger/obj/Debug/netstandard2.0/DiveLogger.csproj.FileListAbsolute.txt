@@ -32,8 +32,7 @@ C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\bin\Debug\netstanda
 C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\bin\Debug\netstandard2.0\Mono.Android.pdb
 C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\bin\Debug\netstandard2.0\Mono.Android.xml
 C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\Account\LoginPage.xaml.g.cs
-C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\Account\RegisterPage.xaml.g.cs
+C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\Auth.xaml.g.cs
 C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\DiveLogPage.xaml.g.cs
 C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\DiveLogRecordsPage.xaml.g.cs
 C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\DiversBoardPage.xaml.g.cs
@@ -43,7 +42,6 @@ C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstanda
 C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\LogPageMaster.xaml.g.cs
 C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
 C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\ProfilePage.xaml.g.cs
-C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\Views\StartPage.xaml.g.cs
 C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.csproj.CoreCompileInputs.cache
 C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.AssemblyInfoInputs.cache
 C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.AssemblyInfo.cs
@@ -51,3 +49,4 @@ C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstanda
 C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.csproj.CopyComplete
 C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.dll
 C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.pdb
+C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\obj\Debug\netstandard2.0\DiveLogger.csprojAssemblyReference.cache

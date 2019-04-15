@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <Compile Remove="Models\Location.cs" />
+    <Compile Remove="Views\Auth.cs" />
     <Compile Remove="Views\FriendsPage.xaml.cs" />
   </ItemGroup>
 
@@ -38,9 +39,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\Account\LoginPage.xaml.cs">
-      <DependentUpon>LoginPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\LogPageMenuItem.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -50,10 +48,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\Account\LoginPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Account\RegisterPage.xaml">
+    <EmbeddedResource Update="Views\Auth.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\DiveLogPage.xaml">
@@ -78,9 +73,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ProfilePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\StartPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

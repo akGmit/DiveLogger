@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="4f2c9068-e37d-40ec-9a93-d6fa1add3660" Publisher="CN=c0007e05-bf65-4e42-8130-eb1b84a7cb7d" Version="1.0.0.0" ProcessorArchitecture="x86" />
+  <Identity Name="diveloggerdebug" Publisher="CN=c0007e05-bf65-4e42-8130-eb1b84a7cb7d" Version="1.0.0.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>DiveLogger.UWP</DisplayName>

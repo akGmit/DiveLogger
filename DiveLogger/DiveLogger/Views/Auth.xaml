@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiveLogger.Views.Auth">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Style="{StaticResource LoginPageStyle}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label  Text="Authenticate"
+                Grid.Row="0"
+			    HorizontalOptions="Center" 
+			    Margin="0, 35, 0, 30">
+                </Label>
+
+                <Grid Grid.Row="1" HorizontalOptions="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label  Grid.Row="1" Grid.Column="0" 
+				    Text="Email:"
+                    Style="{StaticResource LabelStyle}">
+                    </Label>
+
+                    <Entry  x:Name="entryLogInUsername"
+				    Grid.Row="1" Grid.Column="1"
+                    Text="{Binding Email, Mode=TwoWay}"
+                    Placeholder="Required field"
+				    Style="{StaticResource EntryStyle}">
+                    </Entry>
+
+                    <Label  Grid.Row="2" Grid.Column="0" 
+				    Text="Password:"
+                    Style="{StaticResource LabelStyle}">
+                    </Label>
+
+                    <Entry  x:Name="entryLogInPassword"
+				    Grid.Row="2" Grid.Column="1" 
+                    Text="{Binding Password, Mode=TwoWay}"
+                    Placeholder="Required field"
+				    IsPassword="True"
+				    Style="{StaticResource EntryStyle}">
+                    </Entry>
+                </Grid>
+                <StackLayout x:Name="slButtons" 
+                     Grid.Row="2"
+				     Orientation="Horizontal" 
+				     HorizontalOptions="Center">
+                    <Button Text="Log in"
+                            Command="{Binding LoginAction}"></Button>
+                    <Button Text="Sign up"
+                            Command="{Binding SignInAction}"></Button>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

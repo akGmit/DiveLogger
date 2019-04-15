@@ -5,15 +5,6 @@
              xmlns:local="clr-namespace:DiveLogger.ViewModels"
              Title="Dive Log">
    
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Name="menuSave" 
-                     Order="Primary"  
-                     Text="Save Log" 
-                     Priority="0"
-                     Icon="iconDives.png"
-                     Command="{Binding SaveLogCommand}" 
-                     CommandParameter="{Binding DiveLog}"/>
-    </ContentPage.ToolbarItems>
     <!--<ContentPage.BindingContext>
         <local:DiveLogModel/>
     </ContentPage.BindingContext>-->

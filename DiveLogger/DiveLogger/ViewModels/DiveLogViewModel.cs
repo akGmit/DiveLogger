@@ -21,13 +21,7 @@ namespace DiveLogger.ViewModels
 
         public DiveLogViewModel()
         {
-            SaveLogCommand = new Command<DiveLogModel>(SaveLog);
             diveLog = new DiveLogModel();
-        }
-
-        private void SaveLog(DiveLogModel obj)
-        {
-            UserModel.SetUserDiveLog(obj);
         }
     }
 }

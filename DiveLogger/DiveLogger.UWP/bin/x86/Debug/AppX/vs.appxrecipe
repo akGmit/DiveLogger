@@ -19,10 +19,10 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>23B2C541D640BB59ED8097B69C83958048EB8967F8C8F53A5C4939D187160CA0</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>4f2c9068-e37d-40ec-9a93-d6fa1add3660_1.0.0.0_x86__6c0f4wh47py2c</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>4f2c9068-e37d-40ec-9a93-d6fa1add3660_6c0f4wh47py2c!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>4f2c9068-e37d-40ec-9a93-d6fa1add3660</RegisteredPackageID>
+    <RegisteredManifestChecksum>AFD2DB8BC67F454111D12CA1BA9FDF800AEF97234941297471EF73C1885E28DA</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>diveloggerdebug_1.0.0.0_x86__6c0f4wh47py2c</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>diveloggerdebug_6c0f4wh47py2c!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>diveloggerdebug</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=c0007e05-bf65-4e42-8130-eb1b84a7cb7d</RegisteredPackagePublisher>
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-15T00:37:35.504</Modified>
+      <Modified>2019-04-15T04:35:20.937</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\DiveLogger.UWP.exe">
       <PackagePath>entrypoint\DiveLogger.UWP.exe</PackagePath>
-      <Modified>2019-04-15T00:37:30.078</Modified>
+      <Modified>2019-04-15T04:35:17.150</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bruna\.nuget\packages\dnsclient\1.2.0\lib\netstandard2.0\DnsClient.dll">
       <PackagePath>DnsClient.dll</PackagePath>
@@ -116,7 +116,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger\bin\Debug\netstandard2.0\DiveLogger.dll">
       <PackagePath>DiveLogger.dll</PackagePath>
-      <Modified>2019-04-15T00:37:21.025</Modified>
+      <Modified>2019-04-15T04:35:08.722</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bruna\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -283,11 +283,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-15T00:37:29.846</Modified>
+      <Modified>2019-04-15T04:35:16.890</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-15T00:37:29.847</Modified>
+      <Modified>2019-04-15T04:35:16.890</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -299,11 +299,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-04-15T00:37:31.765</Modified>
+      <Modified>2019-04-15T04:08:12.548</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bruna\source\repos\DiveLogger\DiveLogger\DiveLogger.UWP\bin\x86\Debug\Core\DiveLogger.UWP.exe">
       <PackagePath>DiveLogger.UWP.exe</PackagePath>
-      <Modified>2019-04-15T00:37:35.496</Modified>
+      <Modified>2019-04-15T04:35:20.928</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -106,6 +106,7 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "DiveLogger.Android.dll" comes first in this list. */
+		"DiveLogger.Android.dll",
 		"DiveLogger.dll",
 		"DnsClient.dll",
 		"Firebase.Auth.dll",

@@ -36,8 +36,8 @@ namespace DiveLogger.Views
                     new LogPageMenuItem { Id = 0, Title = "Page 1" },
                     new LogPageMenuItem { Id = 1, Title = "Page 2" },
                     new LogPageMenuItem { Id = 2, Title = "Page 3" },
-                    new LogPageMenuItem { Id = 3, Title = "Page 4" },
-                    new LogPageMenuItem { Id = 4, Title = "Page 5" },
+                    //new LogPageMenuItem { Id = 3, Title = "Page 4" },
+                    //new LogPageMenuItem { Id = 4, Title = "Page 5" },
                 });
             }
             
