@@ -54,8 +54,7 @@ namespace DiveLogger.ViewModels
             
             stack = new StackLayout();
             
-            stack.Children.Add(mapSites);
-            stack.Children.Add(SitesList);
+            
         }
 
         /// <summary>
@@ -102,7 +101,6 @@ namespace DiveLogger.ViewModels
             MapSpan.FromCenterAndRadius(
                     new Position(loc.Latitude, loc.Longitude), Distance.FromKilometers(kilometers: 100)))
             {
-                IsShowingUser = true,
                 HeightRequest = 300,
                 WidthRequest = 960,
                 VerticalOptions = LayoutOptions.FillAndExpand,
@@ -113,6 +111,9 @@ namespace DiveLogger.ViewModels
 
             DiveSites = await DiveSitesUtil.GetDiveSitesAsync(loc.Latitude, loc.Longitude, 100);
             UpdatePins();
+
+            stack.Children.Add(mapSites);
+            stack.Children.Add(SitesList);
         }
 
         /// <summary>
