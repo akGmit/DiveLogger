@@ -25,7 +25,6 @@ namespace DiveLogger.ViewModels
 
         public DiveLogViewModel()
         {
-            diveLog = new DiveLogModel();
         }
     }
 }
